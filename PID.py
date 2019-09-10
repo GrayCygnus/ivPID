@@ -98,6 +98,10 @@ class PID:
 
             self.output = self.PTerm + (self.Ki * self.ITerm) + (self.Kd * self.DTerm)
 
+    def setSetpoint(self, set_point):
+        """Value that the PID attempts to reach and to which the error is measured"""
+        self.SetPoint = set_point
+
     def setKp(self, proportional_gain):
         """Determines how aggressively the PID reacts to the current error with setting Proportional Gain"""
         self.Kp = proportional_gain
